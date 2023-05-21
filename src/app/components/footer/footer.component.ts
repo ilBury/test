@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, NgForm, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { HttpService } from 'src/app/services/http.service';
 import { ValidationService } from 'src/app/services/validation.service';
 import { DialogComponent } from '../dialog/dialog.component';
 
@@ -21,7 +20,6 @@ export class FooterComponent {
 
   constructor(
     private fb: FormBuilder,
-    private httpService: HttpService,
     private dialog: MatDialog
   ) { }
 

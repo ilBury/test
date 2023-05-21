@@ -29,7 +29,7 @@ export class MainPageComponent implements OnInit {
   }
 
   forward() {
-    window.location.href = 'https://maxkorzh.live/';
+    /* window.location.href = 'https://maxkorzh.live/'; */
   }
 
 }
