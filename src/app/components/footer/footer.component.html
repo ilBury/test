@@ -1,0 +1,23 @@
+<div class="footer">
+  <form class="example-form" [formGroup]="form" (ngSubmit)="request(form.controls.mail)" #userForm="ngForm">
+    <div class="block">
+      <input
+      matInput
+      placeholder="Enter your Email and get notified"
+      [formControl]="form.controls.mail"
+      >
+      <div class="btn">
+        <button type="submit" [disabled]="form.invalid">
+          <mat-icon class="press" matSuffix>arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+    <mat-error *ngIf="form.controls.mail.hasError('required') && (form.dirty || form.touched)">
+      Email is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="form.controls.mail.hasError('invalid') && (form.dirty || form.touched)">
+      Email is not <strong>invalid</strong>
+    </mat-error>
+  </form>
+</div>
+

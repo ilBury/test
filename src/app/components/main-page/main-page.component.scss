@@ -1,0 +1,108 @@
+:host {
+  .wrapper {
+    width: 100%;
+    min-height: 700px;
+    position: relative;
+    .leftSpot, .rightSpot {
+      position: absolute;
+      width: 465px;
+      height: 314px;
+    }
+    .rightSpot {
+      right: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      padding-top: 60px;
+      .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 90px;
+        font-size: 18px;
+        .title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h1 {
+            font-size: 70px;
+            color: #162C4E;
+            text-transform: uppercase;
+            font-weight: 800;
+            opacity: 40%;
+            line-height: 75px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
+          span {
+
+            width: 420px;
+            text-align: center;
+          }
+        }
+        .countdown {
+          display: flex;
+          flex-direction: row;
+          padding-top: 30px;
+          .time-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .number {
+              font-size: 70px;
+              color: #162C4E;
+              font-weight: 600;
+              line-height: 70px;
+            }
+            .time-block-name {
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              span {
+                position: absolute;
+                color: #FFFFFF;
+              }
+            }
+          }
+          .colon {
+            font-size: 70px;
+            color: #162C4E;
+            font-weight: 600;
+            line-height: 70px;
+          }
+        }
+        .event {
+          display: flex;
+          flex-direction: column;
+          padding: 70px 0;
+          align-items: center;
+          .event-btn {
+            margin-top: 10px;
+            width: 240px;
+            height: 60px;
+            background-color: #1D4169;
+            padding: 15px 25px;
+            border: none;
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 40px;
+            cursor: pointer;
+          }
+          .event-btn:hover {
+            background-color: #1D4179;
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+          }
+        }
+      }
+    }
+  }
+}
