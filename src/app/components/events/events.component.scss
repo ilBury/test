@@ -1,0 +1,101 @@
+:host {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 100px;
+    h1 {
+      font-size: 70px;
+      color: #162C4E;
+      text-transform: uppercase;
+      font-weight: 800;
+      opacity: 40%;
+      line-height: 75px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .accordion {
+      height: 682px;
+      width: 1705px;
+    }
+    .mat-accordion {
+      display: block;
+      width: 685px;
+      transform: rotate(-90deg) translateY(510px) translateX(470px);
+    }
+    .panel-content {
+      transform: translateY(-900px);
+      .blur {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        z-index: 2;
+      }
+      .photo {
+        transform: rotate(90deg) translateX(-215px) translateY(155px);
+      }
+      .block {
+        transform: rotate(90deg) translateY(220px) translateX(-790px);
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        h3 {
+          font-size: 24px;
+        }
+        .data {
+          font-size:18px;
+          opacity: 0.8;
+          padding-bottom: 30px;
+        }
+        .number {
+          transform: translate(-180px, -320px);
+          opacity: 0.04;
+          font-size: 380px;
+          font-weight: 600;
+          font-family: 'Wix Madefor Display', sans-serif;
+        }
+        button {
+          width: 250px;
+          height: 60px;
+          background: rgba(0, 0, 0, 0);
+          border: 2px solid rgba(255, 255, 255, 1);
+          border-left: 7px solid rgba(255, 255, 255, 1);
+          color: #FFFFFF;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .mat-expansion-panel-header:not([aria-disabled=true]) {
+      border-bottom: 1px solid #FFFFFF;
+      height: 85px;
+    }
+    .mat-expansion-panel {
+      margin: 0;
+      border-radius: 0;
+      background-color: #162C4E;
+    }
+    .mat-expansion-panel-header-title {
+      font-size: 32px;
+      font-family: 'Poppins', sans-serif ;
+      color: #FFFFFF ;
+      padding-bottom: 10px;
+      font-weight: 500;
+    }
+    .mat-expansion-panel-header.mat-expanded {
+      background-color: #162C4E;
+      height: 85px;
+      position: relative;
+      z-index: 100;
+    }
+    ::ng-deep .mat-expansion-panel-body {
+      padding: 0;
+    }
+    ::ng-deep .mat-expansion-panel-content {
+      height: 995px;
+    }
+  }
+}

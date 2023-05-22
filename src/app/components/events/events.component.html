@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <h1>ALL EVENTS</h1>
+  <div class="accordion">
+    <mat-accordion class="example-headers-align">
+      <ng-container *ngFor="let item of infromation">
+        <mat-expansion-panel  [expanded]="item.isExpanded"  hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{item.name}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="panel-content">
+            <span>01</span>
+            <img class="blur" src="assets/images/blur.png" alt="">
+            <img class="photo"  src="assets/images/accordion1.png" alt="">
+            <div class="block">
+              <span class="number" >{{item.number}}</span>
+              <h3>Hawaiian party</h3>
+              <span #data class="data">13.02.2023</span>
+              <button (click)="forward()">More information</button>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </ng-container>
+    </mat-accordion>
+  </div>
+</div>

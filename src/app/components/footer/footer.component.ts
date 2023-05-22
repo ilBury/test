@@ -20,18 +20,19 @@ export class FooterComponent {
 
   constructor(
     private fb: FormBuilder,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private validation: ValidationService
   ) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
-
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-
     });
+  }
+
+  scroll(event: any) {
+    this.validation.data.scrollIntoView({behavior: 'smooth'});
   }
 
   request(mail: FormControl<string | null>) {

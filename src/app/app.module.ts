@@ -15,13 +15,16 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { EventsComponent } from './components/events/events.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     DialogComponent,
-    MainPageComponent
+    MainPageComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

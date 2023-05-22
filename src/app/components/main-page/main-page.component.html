@@ -1,14 +1,14 @@
 <div class="wrapper">
-  <img class="leftSpot" src="assets/images/leftSpot.png" alt="#">
-  <img class="rightSpot" src="assets/images/RightSpot.png" alt="#">
+  <img *ngIf="isEmerg" [@emergImg] class="leftSpot" src="assets/images/leftSpot.png" alt="#">
+  <img *ngIf="isEmerg" [@emergImg] class="rightSpot" src="assets/images/RightSpot.png" alt="#">
   <div class="container">
-    <img src="assets/images/Logo.svg" alt="">
+    <img src="assets/images/Logo.svg" alt="" (click)="forward()" *ngIf="isEmerg" [@emergLogo]>
     <div class="block">
-      <div class="title">
-        <h1>Under Construction</h1>
+      <div class="title" *ngIf="isEmerg" [@emergTitle]>
+        <h1 >Under Construction</h1>
         <span>We're making lots of improvements and will be back soon</span>
       </div>
-      <div class="countdown">
+      <div class="countdown" *ngIf="isEmerg" [@emergTime]>
         <ng-container *ngFor="let item of time | keyvalue">
           <div class="time-block" >
             <span class="number">{{item.value}}</span>
@@ -20,16 +20,15 @@
           <div class="colon" *ngIf="item.key !== 'Seconds'">:</div>
         </ng-container>
       </div>
-      <div class="forward">
+      <div class="forward" *ngIf="isEmerg" [@emergEvent]>
         <span>Check our event page when you wait:</span>
 
         <button class="forward-btn" (click)="forward()" >
           Go to the event
           <img src="assets/images/arrowRight.png" alt="">
         </button>
-
-
       </div>
     </div>
   </div>
 </div>
+<app-events ></app-events>

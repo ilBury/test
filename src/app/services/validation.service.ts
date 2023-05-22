@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ValidationService {
-
+  public data: any;
   constructor() { }
 
   static mailValidator(): ValidatorFn {
@@ -14,5 +14,9 @@ export class ValidationService {
       const isValidLogin = nameRe.test(control.value);
       return !isValidLogin ? {invalid: true} : null;
     };
+  }
+
+  scroll() {
+
   }
 }
