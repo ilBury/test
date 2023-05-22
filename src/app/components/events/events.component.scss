@@ -97,5 +97,42 @@
     ::ng-deep .mat-expansion-panel-content {
       height: 995px;
     }
+    ::ng-deep .mat-content.mat-content-hide-toggle {
+
+      margin-right: 8px;
+      height: 100%;
+    }
+  }
+  @media (max-width: 1300px) {
+    .mat-accordion {
+      transform: rotate(180deg) translateY(-50px) translateX(-500px) !important;
+      width: 885px !important;
+      padding-bottom: 50px;
+    }
+
+    .blur{
+      transform: translatex(-130px) translateY(50px) !important;
+    }
+    .number {
+      transform:  translate(550px, -00px) !important;
+      font-size: 300px !important;
+    }
+    .photo {
+      transform: rotate(90deg) translateX(-755px) translateY(-475px) !important;
+    }
+    .panel-content{
+      transform: rotate(90deg) translateY(0px) translateX(-1150px) !important;
+    }
+    .block {
+      transform: rotate(-270deg) translateY(-20px) translateX(-1150px) !important;
+    }
+    .mat-expansion-panel-header-title {
+      transform: rotate(180deg) translate(10px, 10px) !important;
+    }
+  }
+  @media (max-width: 1800px) {
+    .panel-content {
+      min-height: 700px !important;
+    }
   }
 }

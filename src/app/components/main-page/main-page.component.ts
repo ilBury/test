@@ -1,5 +1,5 @@
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { AfterContentInit, AfterViewInit, Component, ComponentRef, ElementRef, OnInit, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, ComponentRef, DoCheck, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild, ViewContainerRef, ViewRef } from '@angular/core';
 import { ValidationService } from 'src/app/services/validation.service';
 
 @Component({
@@ -50,15 +50,16 @@ import { ValidationService } from 'src/app/services/validation.service';
 
   ]
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent implements OnInit, DoCheck {
   public currentTime: Date;
   public deadlineTime = new Date(2023, 4, 30, 23, 59, 59);
   public time: Time;
   public isEmerg: boolean = false;
-
+  public isLess: boolean;
 
 
   ngOnInit(): void {
+
     this.isEmerg = true;
     this.currentTime = new Date();
     this.time = this.calulationTime();
@@ -67,6 +68,13 @@ export class MainPageComponent implements OnInit {
       this.time = this.calulationTime();
     }, 1000)
   }
+
+  ngDoCheck(): void {
+    window.innerWidth < 1000 ? this.isLess = true : this.isLess = false;
+
+  }
+
+
 
   calulationTime(): Time {
     return {

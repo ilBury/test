@@ -5,7 +5,7 @@
     position: relative;
     .leftSpot, .rightSpot {
       position: absolute;
-      width: 465px;
+      width: 20%;
       height: 314px;
     }
     .rightSpot {
@@ -27,7 +27,9 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+
           h1 {
+            font-family: "Poppins", sans-serif;
             font-size: 70px;
             color: #162C4E;
             text-transform: uppercase;
@@ -37,7 +39,6 @@
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           }
           span {
-
             width: 420px;
             text-align: center;
           }
@@ -103,6 +104,36 @@
           }
         }
       }
+    }
+  }
+  @media(max-width: 1000px) {
+    .title {
+      span {
+        font-size: 16px !important;
+        width: 320px !important;
+      }
+      h1 {
+        font-size: 36px !important;
+      }
+    }
+    .number {
+      font-size: 36px !important;
+    }
+    .time-block-name {
+
+      img {
+        width: 60px;
+        height: 40px;
+      }
+    }
+    .colon {
+      font-size: 36px !important;
+    }
+    .countdown {
+      gap: 5%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
   }
 }

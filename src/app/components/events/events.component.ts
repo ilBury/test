@@ -12,46 +12,55 @@ export class EventsComponent implements AfterViewInit {
     {
       name: 'Hawaiian party',
       number: '01',
-      isExpanded: true
+      isExpanded: true,
+      isDisabled: true
     },
     {
       name: 'Мafia party',
       number: '02',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'Party',
       number: '03',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'Party on the beach',
       number: '04',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'Home Security',
       number: '05',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'Network Design & Implementation',
       number: '06',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'System Design & Engineering',
       number: '07',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
     {
       name: 'Client Care Plans',
       number: '08',
-      isExpanded: false
+      isExpanded: false,
+      isDisabled: false
     },
   ]
 
   @ViewChild('data', {read: ElementRef}) panel: ElementRef;
+  @ViewChild('header', {read: ElementRef}) header: ElementRef;
 
   constructor(private validation: ValidationService) {
   }
@@ -59,6 +68,18 @@ export class EventsComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.validation.data = document.querySelector('.accordion');
     /* console.log(this.panel.nativeElement) */
+  }
+
+  hello(event: any) {
+    this.infromation.forEach(val => {
+      if(val.name === event.target.innerHTML.trim()) {
+
+        val.isDisabled = true;
+      } else {
+        val.isDisabled = false;
+      }
+    })
+
   }
 
   forward() {

@@ -14,7 +14,11 @@
             <span class="number">{{item.value}}</span>
             <div class="time-block-name">
               <img src="assets/images/forTime.png" alt="">
-              <span>{{item.key}}</span>
+              <span *ngIf="isLess;else elseBlock">{{item.key[0]}}{{item.key[0]}}</span>
+              <ng-template #elseBlock>
+                <span >{{item.key}}</span>
+              </ng-template>
+
             </div>
           </div>
           <div class="colon" *ngIf="item.key !== 'Seconds'">:</div>

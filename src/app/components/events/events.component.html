@@ -3,8 +3,8 @@
   <div class="accordion">
     <mat-accordion class="example-headers-align">
       <ng-container *ngFor="let item of infromation">
-        <mat-expansion-panel  [expanded]="item.isExpanded"  hideToggle>
-          <mat-expansion-panel-header>
+        <mat-expansion-panel  #header (click)="hello($event)" [disabled]="item.isDisabled"  [expanded]="item.isExpanded"  hideToggle>
+          <mat-expansion-panel-header >
             <mat-panel-title>
               {{item.name}}
             </mat-panel-title>
